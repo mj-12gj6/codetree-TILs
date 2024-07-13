@@ -22,10 +22,7 @@ int main() {
 
     for(int i=0;i<N;i++)
     {
-        if(maxSum<arr[i]+arr[2*N-1-i])
-        {
-            maxSum=arr[i]+arr[2*N-1-i];
-        }
+        maxSum=max(maxSum,arr[i]+arr[2*N-1-i]);
     }   
 
     cout << maxSum;
