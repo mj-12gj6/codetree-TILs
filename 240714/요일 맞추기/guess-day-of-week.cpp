@@ -30,6 +30,7 @@ int main() {
             diff += arr[i];
         }
         diff = diff + d1 - d2;
+        diff = -diff;
     }
 
 
