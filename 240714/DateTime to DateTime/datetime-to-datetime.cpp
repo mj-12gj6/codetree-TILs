@@ -6,7 +6,14 @@ int main() {
     int a,b,c;
     cin >> a >> b >> c;
 
-    cout << (a-11)*24*60 + (b-11)*60 + c-11;
+    int min=(a-11)*24*60 + (b-11)*60 + c-11;
+
+    if(min<0)
+    {
+        cout << -1;
+    }
+
+    cout << min;
 
 
 
