@@ -16,15 +16,13 @@ int main() {
 
     cin >> n >> c;
 
-    Info A;
+    Info A={"codetree",50};
 
-    A.name="codetree";
-    A.code=50;
+
 
     cout << "product " << A.code << " is " << A.name << "\n";
 
-    A.name=n;
-    A.code=c;
+    A={n,c};
 
     cout << "product " << A.code << " is " << A.name;
 
