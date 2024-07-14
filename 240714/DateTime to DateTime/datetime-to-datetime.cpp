@@ -12,9 +12,11 @@ int main() {
     {
         cout << -1;
     }
-
-    cout << min;
-
+    else
+    {
+        cout << min;
+    }
+    
 
 
     return 0;
