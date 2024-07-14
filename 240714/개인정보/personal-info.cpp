@@ -32,6 +32,8 @@ int main() {
 
     sort(per,per+5,cmp_name);
 
+    cout << fixed;
+    cout.precision(1);
     cout << "name\n";
 
     for(int i=0;i<5;i++)
