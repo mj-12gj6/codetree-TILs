@@ -29,7 +29,7 @@ int main() {
         {
             diff+=arr[i];
         }
-        diff=diff+d2-d1;
+        diff=diff+d1-d2;
     }
 
     int n;
