@@ -3,42 +3,49 @@
 
 using namespace std;
 
-struct Element {
-    int value;
-    int originalIndex;
+struct arr
+{
+    int n;
+    int num;
 };
 
-// Comparator 함수: 값 기준으로 정렬하되, 값이 같으면 원래 인덱스를 기준으로 정렬합니다.
-bool compare(const Element &a, const Element &b) {
-    return (a.value < b.value) || (a.value == b.value && a.originalIndex < b.originalIndex);
+bool cmp(arr a, arr b)
+{
+    if (a.n == b.n)
+    {
+        return a.num < b.num;
+    }
+    return a.n < b.n;
 }
 
 int main() {
-    int n;
-    cin >> n;
+    // 여기에 코드를 작성해주세요.
+    arr A[1000];
 
-    Element elements[n];
-    int result[n];
+    int ans[1001];
 
-    // 입력받기 및 원소와 원래 위치 저장
-    for (int i = 0; i < n; ++i) {
-        cin >> elements[i].value;
-        elements[i].originalIndex = i;
+    int N;
+    cin >> N;
+
+    for (int i = 0; i < N; i++)
+    {
+        cin >> A[i].n;
+        A[i].num = i + 1;
     }
 
-    // 원소를 값 기준으로 정렬
-    sort(elements, elements + n, compare);
+    sort(A, A + N, cmp);
 
-    // 각 원소의 새로운 위치를 원래 인덱스에 맞춰 저장
-    for (int i = 0; i < n; ++i) {
-        result[elements[i].originalIndex] = i+1;
+    for (int i = 0; i < N; i++)
+    {
+        ans[A[i].num] = i+1;
     }
 
-    // 결과 출력
-    for (int i = 0; i < n; ++i) {
-        cout << result[i] << " ";
+    for(int i=1;i<=N;i++)
+    {
+        cout << ans[i] << " ";
     }
-    cout << endl;
+
+
 
     return 0;
 }
