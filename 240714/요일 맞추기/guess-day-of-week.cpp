@@ -14,11 +14,24 @@ int main() {
 
     int diff=0;
 
-    for(int i=m1;i<m2;i++)
+
+    if(m1>=m2)
     {
-        diff+=arr[i];
+        for(int i=m1;i<m2;i++)
+        {
+            diff+=arr[i];
+        }
+        diff=diff+d2-d1;
     }
-    diff=diff+d2-d1;
+    else
+    {
+        for(int i=m2;i<m1;i++)
+        {
+            diff+=arr[i];
+        }
+        diff=diff+d2-d1;
+    }
+
     int n;
 
     if(diff>0)
