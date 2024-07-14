@@ -23,19 +23,26 @@ int main() {
         cin >> future[i].date >> future[i].day >> future[i].weather;
     }
 
-    int idx=0;
-    data rain=future[3];
 
+    data rain;
 
     for(int i=0;i<n;i++)
     {
         if(future[i].weather=="Rain")
         {
-            
+            rain=future[i];
+            break;
+        }
+    }
+
+
+    for(int i=0;i<n;i++)
+    {
+        if(future[i].weather=="Rain")
+        {           
             if(future[i].date <= rain.date)
             {
                 rain=future[i];
-                idx=i;
             }
         }
     }
