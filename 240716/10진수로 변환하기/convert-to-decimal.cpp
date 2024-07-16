@@ -9,12 +9,12 @@ int main()
     cin >> a;
 
     int n=0;
-    for(int i=0;i<(int)a.size();i++)
+    for(int i=0;i<(int)a.length();i++)
     {
         n=n*2+(a[i]-'0');
     }
 
     cout << n;
-    
+
     return 0;
 }
