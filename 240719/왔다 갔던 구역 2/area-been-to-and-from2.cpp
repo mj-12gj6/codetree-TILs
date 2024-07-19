@@ -46,7 +46,7 @@ int main() {
     }
 
     int cnt=0;
-    for(int i=0;i<=1000;i++)
+    for(int i=0;i<=2000;i++)
     {
         if(checked[i]>=2)
         {
